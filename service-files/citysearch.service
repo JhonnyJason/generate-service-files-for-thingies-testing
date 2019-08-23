@@ -1,0 +1,16 @@
+[Unit]
+Description=A thingy service in it's thingy ecosystem :-)
+
+[Service]
+User=citysearch
+Group=citysearch
+
+ExecStart=/usr/bin/node /home/citysearch/citysearch-repository/service.js
+WorkingDirectory=/home/citysearch/citysearch-repository
+
+Environment=PORT=3002
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

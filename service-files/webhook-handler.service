@@ -1,0 +1,17 @@
+[Unit]
+Description=A thingy service in it's thingy ecosystem :-)
+
+[Service]
+User=webhook-handler
+Group=webhook-handler
+
+ExecStart=/usr/bin/node /home/webhook-handler/webhook-handler-repository/service.js
+WorkingDirectory=/home/webhook-handler/webhook-handler-repository
+
+Environment=SOCKETMODE=true
+
+Type=oneshot
+Restart=no
+
+[Install]
+WantedBy=multi-user.target

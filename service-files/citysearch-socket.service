@@ -1,0 +1,16 @@
+[Unit]
+Description=A thingy service in it's thingy ecosystem :-)
+
+[Service]
+User=citysearch-socket
+Group=citysearch-socket
+
+ExecStart=/usr/bin/node /home/citysearch-socket/citysearch-on-socket/service.js
+WorkingDirectory=/home/citysearch-socket/citysearch-on-socket
+
+Environment=SOCKETMODE=true
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
