@@ -10,11 +10,8 @@ config.thingies = [
         homeUser: "root",
         repository: "test-machine1-output",
         branch: "release",
-        type:"installer",
-        updateCode: [
-            "cd /root/test-machine1-output; git pull origin release;",
-            "/root/test-machine1-output/installer.js update;"
-        ]
+        type:"installer"
+
     }
     // ,
     // {
